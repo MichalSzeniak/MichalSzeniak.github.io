@@ -1,5 +1,7 @@
 @import '~normalize.css';
 @import '_variables';
+@import './modules/hero.scss';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 html {
@@ -13,5 +15,5 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
