@@ -21,10 +21,15 @@
     }
 
     &__container {
+        padding: 32px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: $tablet) {
+            flex-direction: row;
+        }
     }
 
     &__header1 {
@@ -32,6 +37,10 @@
         font-size: 24px;
         font-weight: 700;
         color: #fff;
+
+        @media (min-width: $tablet) {
+            align-self: flex-start;
+        }
         
         &::before {
             @include headerDecoration;
@@ -44,6 +53,10 @@
         font-size: 24px;
         font-weight: 700;
         color: #fff;
+
+        @media (min-width: $tablet) {
+            align-self: flex-start;
+        }
         
         &::before {
             @include headerDecoration;
@@ -52,14 +65,14 @@
     }
 
     &__list {
-        // width: 580px;
-        // display: grid;
-        // justify-content: center;
-        // align-items: center;
-        // grid-template-columns: 1fr;
         color: #B7B7B7;
-        min-width: 220px;
         margin-bottom: 50px;
+
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-width: 430px;
+        }
 
         &--item1 {
             position: relative;
@@ -69,8 +82,8 @@
             &::before {
                 position: absolute;
                 content: url(/src/assets/icons/greenMark.svg);
-                top: 0;
-                left: 0;
+                top: 2px;
+                left: -10px;
             }
         }
 
@@ -82,8 +95,8 @@
             &::before {
                 position: absolute;
                 content: url(/src/assets/icons/purpleMark.svg);
-                top: 0px;
-                left: 0px;
+                top: 2px;
+                left: -10px;
             }
         }
     }
