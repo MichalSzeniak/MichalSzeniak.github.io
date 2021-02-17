@@ -1,0 +1,91 @@
+@mixin headerDecoration {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: $green;
+}
+
+.skills {
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    color: #fff;
+
+    &__box {
+        max-width: 1080px;
+        padding: 64px 16px;
+        margin: 0 auto;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header1 {
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        
+        &::before {
+            @include headerDecoration;
+            background-color: $green;
+        }
+    }
+
+    &__header2 {
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        
+        &::before {
+            @include headerDecoration;
+            background-color: $purple;
+        }
+    }
+
+    &__list {
+        // width: 580px;
+        // display: grid;
+        // justify-content: center;
+        // align-items: center;
+        // grid-template-columns: 1fr;
+        color: #B7B7B7;
+        min-width: 220px;
+        margin-bottom: 50px;
+
+        &--item1 {
+            position: relative;
+            list-style: none;
+            padding: 0 22px;
+            line-height: 40px;
+            &::before {
+                position: absolute;
+                content: url(/src/assets/icons/greenMark.svg);
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--item2 {
+            position: relative;
+            list-style: none;
+            padding: 0px 22px;
+            line-height: 40px;
+            &::before {
+                position: absolute;
+                content: url(/src/assets/icons/purpleMark.svg);
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+}
+
