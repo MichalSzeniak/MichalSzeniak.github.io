@@ -3,8 +3,23 @@
     height: 100%;
     background: linear-gradient(213.83deg, #1A1A1A 10%, #000000 80%);
     color: #fff;
+    position: relative;
+    z-index: 2;
+
+    &__decoration {
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        z-index: -1;
+
+        &--color {
+            animation: 20s decoration linear infinite;
+        }
+    }
 
     &__box {
+        display: block;
         padding: 64px 16px;
         display: flex;
         flex-direction: column;
@@ -79,6 +94,16 @@
         margin: 70px 0 50px 0;
         transition: 0.3s background-color ease-in-out;
         overflow: hidden;
+
+        &::after {
+            content: '';
+            width: 400px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
         
         &::before {
             content: '';
@@ -136,5 +161,28 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes decoration {
+    0% {
+        fill: #55C2FF; 
+        transform: translate(0%, 0%); 
+    }
+    25% {
+        fill: #99FFA3;
+        transform: translate(10%, -20%); 
+    }
+    50%{
+        fill: #FFF975;
+        transform: translate(20%, -10%);
+    }
+    75%{
+        fill: #FF8D8D;
+        transform: translate(0%, -20%);
+    }
+    100% {
+        fill: #55C2FF;
+        transform: translate(0%, 0%);
     }
 }

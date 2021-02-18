@@ -21,10 +21,10 @@ fetch('https://api.github.com/users/MichalSzeniak/repos?sort=created')
           <span>${description}</span>
       </p>
       <div class="project__links">
-          <a class="project__link" href="${homepage}" title="${name}">
+          <a class="project__link" target="_blank" href="${homepage}" title="${name}">
               <img class="project__link--icon" src="monitor.svg" alt="">
               Demo</a>
-          <a class="project__link project__link--decoration" href="${html_url}" title="${name}">
+          <a class="project__link project__link--decoration" target="_blank" href="${html_url}" title="${name}">
               <img class="project__link--icon" src="code.svg" alt=""> Github</a>
       </div>
       </article>`;

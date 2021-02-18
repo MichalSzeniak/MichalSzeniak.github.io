@@ -18,6 +18,8 @@
         max-width: 1080px;
         padding: 64px 16px;
         margin: 0 auto;
+        position: relative;
+        z-index: 2;
     }
 
     &__container {
@@ -81,7 +83,7 @@
             line-height: 40px;
             &::before {
                 position: absolute;
-                content: url(/src/assets/icons/greenMark.svg);
+                content: url(../assets/icons/greenMark.svg);
                 top: 2px;
                 left: -10px;
             }
@@ -94,7 +96,7 @@
             line-height: 40px;
             &::before {
                 position: absolute;
-                content: url(/src/assets/icons/purpleMark.svg);
+                content: url(../assets/icons/purpleMark.svg);
                 top: 2px;
                 left: -10px;
             }
