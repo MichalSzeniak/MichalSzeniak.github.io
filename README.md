@@ -1,4 +1,11 @@
+# Michał Szeniak - JUNIOR FRONTEND DEVELOPER PORTFOLIO
 ![cover](https://michalszeniak.github.io/og.png)
 
-# Michał Szeniak - JUNIOR FRONTEND DEVELOPER PORTFOLIO
-My simple portfolio
+## See [DEMO](michalszeniak.github.io).
+
+## Tech stack
+* HTML
+* Sass
+* Figma
+* npm
+* Webpack
